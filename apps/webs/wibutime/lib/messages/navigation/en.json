@@ -1,0 +1,37 @@
+{
+  "home": "Home",
+  "about": "About", 
+  "login": "Login",
+  "register": "Register",
+  "logout": "Logout",
+  "dashboard": "Dashboard",
+  "profile": "Profile",
+  "settings": "Settings",
+  "users": "Users",
+  "reports": "Reports",
+  "analytics": "Analytics",
+  "help": "Help",
+  "support": "Support",
+  "contact": "Contact",
+  "menu": "Menu",
+  "close": "Close",
+  "open": "Open",
+  "toggle": "Toggle navigation",
+  "breadcrumb": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "sidebar": {
+    "collapse": "Collapse sidebar",
+    "expand": "Expand sidebar"
+  },
+  "tabs": {
+    "overview": "Overview",
+    "details": "Details",
+    "settings": "Settings",
+    "history": "History",
+    "logs": "Logs"
+  }
+}

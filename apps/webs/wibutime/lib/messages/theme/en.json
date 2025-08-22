@@ -1,0 +1,52 @@
+{
+  "toggle": "Toggle light/dark mode",
+  "light": "Light mode",
+  "dark": "Dark mode",
+  "system": "System",
+  "auto": "Auto",
+  "appearance": "Appearance",
+  "colorScheme": "Color Scheme",
+  "brightness": "Brightness",
+  "contrast": "Contrast",
+  "settings": {
+    "title": "Theme Settings",
+    "description": "Customize your visual experience",
+    "autoSwitch": "Auto switch with system",
+    "schedule": "Schedule theme changes",
+    "customColors": "Custom colors",
+    "fontSize": "Font size",
+    "fontFamily": "Font family",
+    "compactMode": "Compact mode",
+    "animations": "Enable animations",
+    "reducedMotion": "Reduce motion"
+  },
+  "colors": {
+    "primary": "Primary color",
+    "secondary": "Secondary color",
+    "accent": "Accent color",
+    "background": "Background color",
+    "foreground": "Text color",
+    "muted": "Muted color",
+    "border": "Border color",
+    "card": "Card background",
+    "popover": "Popover background",
+    "destructive": "Destructive color",
+    "success": "Success color",
+    "warning": "Warning color",
+    "info": "Info color"
+  },
+  "presets": {
+    "default": "Default",
+    "slate": "Slate",
+    "stone": "Stone",
+    "gray": "Gray",
+    "neutral": "Neutral",
+    "red": "Red",
+    "rose": "Rose",
+    "orange": "Orange",
+    "green": "Green",
+    "blue": "Blue",
+    "yellow": "Yellow",
+    "violet": "Violet"
+  }
+}

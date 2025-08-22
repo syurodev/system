@@ -1,0 +1,46 @@
+{
+  "title": "Chào mừng đến với Farmatic",
+  "subtitle": "Hệ thống quản lý trang trại hiện đại",
+  "description": "Quản lý hoạt động trang trại của bạn một cách hiệu quả với nền tảng quản lý trang trại toàn diện.",
+  "hero": {
+    "title": "Quản Lý Trang Trại Hiện Đại",
+    "subtitle": "Tối ưu hóa hoạt động nông nghiệp với công cụ quản lý trang trại thông minh",
+    "cta": "Bắt Đầu",
+    "learnMore": "Tìm Hiểu Thêm"
+  },
+  "features": {
+    "title": "Tại Sao Chọn Farmatic?",
+    "subtitle": "Mọi thứ bạn cần để quản lý trang trại hiệu quả",
+    "crop": {
+      "title": "Quản Lý Cây Trồng",
+      "description": "Theo dõi và quản lý cây trồng trong suốt chu kỳ phát triển"
+    },
+    "livestock": {
+      "title": "Theo Dõi Vật Nuôi",
+      "description": "Giám sát sức khỏe và năng suất của đàn gia súc"
+    },
+    "finance": {
+      "title": "Quản Lý Tài Chính",
+      "description": "Theo dõi chi phí, thu nhập và khả năng sinh lời"
+    },
+    "weather": {
+      "title": "Tích Hợp Thời Tiết",
+      "description": "Nhận dữ liệu thời tiết thời gian thực để ra quyết định tốt hơn"
+    }
+  },
+  "stats": {
+    "farms": "Trang Trại Được Quản Lý",
+    "users": "Nông Dân Hài Lòng",
+    "yield": "Tăng Năng Suất",
+    "savings": "Tiết Kiệm Chi Phí"
+  },
+  "testimonials": {
+    "title": "Nông Dân Nói Gì Về Chúng Tôi",
+    "subtitle": "Được tin tưởng bởi nông dân trên khắp thế giới"
+  },
+  "cta": {
+    "title": "Sẵn Sàng Chuyển Đổi Trang Trại?",
+    "subtitle": "Tham gia cùng hàng ngàn nông dân đang sử dụng Farmatic",
+    "button": "Bắt Đầu Dùng Thử Miễn Phí"
+  }
+}

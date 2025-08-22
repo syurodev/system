@@ -1,0 +1,52 @@
+{
+  "toggle": "Chuyển đổi chế độ sáng/tối",
+  "light": "Chế độ sáng",
+  "dark": "Chế độ tối",
+  "system": "Hệ thống",
+  "auto": "Tự động",
+  "appearance": "Giao diện",
+  "colorScheme": "Bảng màu",
+  "brightness": "Độ sáng",
+  "contrast": "Độ tương phản",
+  "settings": {
+    "title": "Cài đặt giao diện",
+    "description": "Tùy chỉnh trải nghiệm thị giác của bạn",
+    "autoSwitch": "Tự động chuyển theo hệ thống",
+    "schedule": "Lên lịch thay đổi giao diện",
+    "customColors": "Màu tùy chỉnh",
+    "fontSize": "Kích thước chữ",
+    "fontFamily": "Phông chữ",
+    "compactMode": "Chế độ gọn",
+    "animations": "Bật hiệu ứng",
+    "reducedMotion": "Giảm chuyển động"
+  },
+  "colors": {
+    "primary": "Màu chính",
+    "secondary": "Màu phụ",
+    "accent": "Màu nhấn",
+    "background": "Màu nền",
+    "foreground": "Màu chữ",
+    "muted": "Màu nhạt",
+    "border": "Màu viền",
+    "card": "Nền thẻ",
+    "popover": "Nền popup",
+    "destructive": "Màu nguy hiểm",
+    "success": "Màu thành công",
+    "warning": "Màu cảnh báo",
+    "info": "Màu thông tin"
+  },
+  "presets": {
+    "default": "Mặc định",
+    "slate": "Xám đá",
+    "stone": "Xám đất",
+    "gray": "Xám",
+    "neutral": "Trung tính",
+    "red": "Đỏ",
+    "rose": "Hồng",
+    "orange": "Cam",
+    "green": "Xanh lá",
+    "blue": "Xanh dương",
+    "yellow": "Vàng",
+    "violet": "Tím"
+  }
+}

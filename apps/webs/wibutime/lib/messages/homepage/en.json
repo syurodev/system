@@ -1,0 +1,46 @@
+{
+  "title": "Welcome to Farmatic",
+  "subtitle": "Farm management system for modern agriculture",
+  "description": "Manage your farm operations efficiently with our comprehensive farm management platform.",
+  "hero": {
+    "title": "Modern Farm Management",
+    "subtitle": "Streamline your agricultural operations with intelligent farm management tools",
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "title": "Why Choose Farmatic?",
+    "subtitle": "Everything you need to manage your farm efficiently",
+    "crop": {
+      "title": "Crop Management",
+      "description": "Track and manage your crops throughout their lifecycle"
+    },
+    "livestock": {
+      "title": "Livestock Tracking", 
+      "description": "Monitor your animals' health and productivity"
+    },
+    "finance": {
+      "title": "Financial Management",
+      "description": "Keep track of expenses, income, and profitability"
+    },
+    "weather": {
+      "title": "Weather Integration",
+      "description": "Get real-time weather data for better decision making"
+    }
+  },
+  "stats": {
+    "farms": "Farms Managed",
+    "users": "Happy Farmers", 
+    "yield": "Increase in Yield",
+    "savings": "Cost Savings"
+  },
+  "testimonials": {
+    "title": "What Our Farmers Say",
+    "subtitle": "Trusted by farmers around the world"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Farm?",
+    "subtitle": "Join thousands of farmers who are already using Farmatic",
+    "button": "Start Your Free Trial"
+  }
+}

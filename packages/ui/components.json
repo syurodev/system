@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/styles/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@farmatic/ui/components",
+    "utils": "@farmatic/ui/lib/utils",
+    "hooks": "@farmatic/ui/hooks",
+    "lib": "@farmatic/ui/lib",
+    "ui": "@farmatic/ui/components"
+  }
+}

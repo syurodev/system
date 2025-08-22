@@ -1,0 +1,37 @@
+{
+  "home": "Trang chủ",
+  "about": "Giới thiệu",
+  "login": "Đăng nhập", 
+  "register": "Đăng ký",
+  "logout": "Đăng xuất",
+  "dashboard": "Bảng điều khiển",
+  "profile": "Hồ sơ",
+  "settings": "Cài đặt",
+  "users": "Người dùng",
+  "reports": "Báo cáo",
+  "analytics": "Phân tích",
+  "help": "Trợ giúp",
+  "support": "Hỗ trợ",
+  "contact": "Liên hệ",
+  "menu": "Menu",
+  "close": "Đóng",
+  "open": "Mở",
+  "toggle": "Chuyển đổi điều hướng",
+  "breadcrumb": {
+    "home": "Trang chủ",
+    "dashboard": "Bảng điều khiển", 
+    "profile": "Hồ sơ",
+    "settings": "Cài đặt"
+  },
+  "sidebar": {
+    "collapse": "Thu gọn thanh bên",
+    "expand": "Mở rộng thanh bên"
+  },
+  "tabs": {
+    "overview": "Tổng quan",
+    "details": "Chi tiết",
+    "settings": "Cài đặt", 
+    "history": "Lịch sử",
+    "logs": "Nhật ký"
+  }
+}
