@@ -1,0 +1,21 @@
+{
+  "name": "@repo/types",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "exports": {
+    ".": {
+      "types": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun"
+  },
+  "type": "module",
+  "types": "src/index.ts"
+}

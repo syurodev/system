@@ -1,4 +1,4 @@
-# @farmatic/elysia
+# @repo/elysia
 
 To install dependencies:
 

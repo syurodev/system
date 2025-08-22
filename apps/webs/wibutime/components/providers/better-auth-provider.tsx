@@ -7,7 +7,7 @@
 
 "use client";
 
-import { Toaster } from "@farmatic/ui/components/sonner";
+import { Toaster } from "@repo/ui/components/sonner";
 import { ReactNode } from "react";
 
 interface BetterAuthProviderProps {

@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@farmatic/ui/components",
-    "utils": "@farmatic/ui/lib/utils",
-    "hooks": "@farmatic/ui/hooks",
-    "lib": "@farmatic/ui/lib",
-    "ui": "@farmatic/ui/components"
+    "components": "@repo/ui/components",
+    "utils": "@repo/ui/lib/utils",
+    "hooks": "@repo/ui/hooks",
+    "lib": "@repo/ui/lib",
+    "ui": "@repo/ui/components"
   }
 }

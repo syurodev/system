@@ -4,7 +4,7 @@ import {
   createInternalServerErrorResponse,
   createUnauthorizedResponse,
   createValidationErrorResponse,
-} from "@farmatic/utils";
+} from "@repo/utils";
 
 /**
  * Error types và HTTP status codes

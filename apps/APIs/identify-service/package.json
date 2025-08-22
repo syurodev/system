@@ -1,0 +1,17 @@
+{
+  "name": "user-service",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "elysia": "^1.3.13",
+    "@repo/elysia": "*",
+    "@repo/types": "*",
+    "@repo/utils": "*"
+  },
+  "devDependencies": {
+  },
+  "module": "src/index.js"
+}

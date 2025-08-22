@@ -1,6 +1,6 @@
-import "@farmatic/ui/styles/globals.css";
+import "@repo/ui/styles/globals.css";
 
-import { ThemeProvider } from "@farmatic/ui/providers/theme-provider";
+import { ThemeProvider } from "@repo/ui/providers/theme-provider";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";

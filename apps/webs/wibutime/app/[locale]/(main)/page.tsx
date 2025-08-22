@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "@farmatic/ui/components/card";
+import { Card, CardContent, CardHeader } from "@repo/ui/components/card";
 import { Atom, Pipette, Shrimp, TestTubes, Thermometer } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { unstable_ViewTransition as ViewTransition } from "react";

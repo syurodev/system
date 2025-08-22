@@ -1,10 +1,10 @@
 {
-  "extends": "@farmatic/typescript-config/react-library.json",
+  "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@farmatic/ui/*": ["./src/*"]
-    }
+      "@repo/ui/*": ["./src/*"]
+    },
   },
   "include": ["."],
   "exclude": ["node_modules", "dist"]

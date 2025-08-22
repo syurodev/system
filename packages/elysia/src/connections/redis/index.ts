@@ -67,7 +67,7 @@ export class RedisClientWrapper {
         tls: this.config.tls,
       };
 
-      // Create client with URL or individual config
+      // Create a client with URL or individual config
       if (this.config.url) {
         this.client = new RedisClient(this.config.url, options);
       } else {
@@ -282,6 +282,6 @@ export class RedisClientWrapper {
 /**
  * Global Redis instance
  */
-export const redis = () => {
+export const index = () => {
   return new RedisClientWrapper();
 };

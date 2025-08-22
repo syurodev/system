@@ -8,10 +8,10 @@
 "use client";
 
 import {authUtils} from "@/lib/utils/better-auth-client";
-import {Button} from "@farmatic/ui/components/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,} from "@farmatic/ui/components/card";
-import {Input} from "@farmatic/ui/components/input";
-import {Label} from "@farmatic/ui/components/label";
+import {Button} from "@repo/ui/components/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,} from "@repo/ui/components/card";
+import {Input} from "@repo/ui/components/input";
+import {Label} from "@repo/ui/components/label";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {CheckCircle, Eye, EyeOff, Github} from "lucide-react";
 import {useTranslations} from "next-intl";

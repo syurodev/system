@@ -14,7 +14,7 @@
     "components": "@/components",
     "hooks": "@/hooks",
     "lib": "@/lib",
-    "utils": "@farmatic/ui/lib/utils",
-    "ui": "@farmatic/ui/components"
+    "utils": "@repo/ui/lib/utils",
+    "ui": "@repo/ui/components"
   }
 }

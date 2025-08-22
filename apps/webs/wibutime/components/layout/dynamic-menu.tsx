@@ -1,8 +1,8 @@
 "use client";
 
 import {authUtils, useAuth} from "@/lib/utils/better-auth-client";
-import {Avatar, AvatarFallback, AvatarImage,} from "@farmatic/ui/components/avatar";
-import {Button} from "@farmatic/ui/components/button";
+import {Avatar, AvatarFallback, AvatarImage,} from "@repo/ui/components/avatar";
+import {Button} from "@repo/ui/components/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,8 +10,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@farmatic/ui/components/dropdown-menu";
-import {cn} from "@farmatic/ui/lib/utils";
+} from "@repo/ui/components/dropdown-menu";
+import {cn} from "@repo/ui/lib/utils";
 import {Ellipsis, Home, LogIn, LogOut, Settings, User} from "lucide-react";
 import LanguageSwitcher from "./language-switcher";
 import ThemeSwitcher from "./theme-switcher";
