@@ -440,4 +440,22 @@ export abstract class BaseRepository<T extends BaseEntity>
   protected getTableName(): string {
     return this.tableName;
   }
+
+  /**
+   * Execute raw SQL query with parameters
+   * @param query SQL query string with parameter placeholders ($1, $2, etc.)
+   * @param params Array of parameters to bind to the query
+   * @param tx Optional transaction to use
+   * @returns Promise resolving to query results
+   */
+  async executeQuery(query: string, params: any[] = [], tx?: Transaction): Promise<any[]> {
+    const client = tx || this.sql;
+    try {
+      const result = await client.unsafe(query, params);
+      return Array.isArray(result) ? result : [result];
+    } catch (error) {
+      console.error("Error executing raw query:", { query, params, error });
+      throw error;
+    }
+  }
 }

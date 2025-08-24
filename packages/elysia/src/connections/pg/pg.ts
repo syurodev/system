@@ -29,12 +29,12 @@ export class PgDatabasePool {
    * Khởi tạo connection pool
    */
   async initialize(): Promise<void> {
-    console.log("Database pool initializing...", {
-      hostname: this.config.hostname || "from URL",
-      port: this.config.port || "from URL",
-      database: this.config.database || "from URL",
-      maxConnections: this.config.max,
-    });
+    // console.log("Database pool initializing...", {
+    //   hostname: this.config.hostname || "from URL",
+    //   port: this.config.port || "from URL",
+    //   database: this.config.database || "from URL",
+    //   maxConnections: this.config.max,
+    // });
 
     try {
       // Ensure max connections is reasonable for Better Auth
@@ -51,11 +51,11 @@ export class PgDatabasePool {
       // Test connection
       await this.healthCheck();
 
-      console.log("Database pool initialized successfully with config:", {
-        max: poolConfig.max,
-        idleTimeout: poolConfig.idleTimeout,
-        maxLifetime: poolConfig.maxLifetime,
-      });
+      // console.log("Database pool initialized successfully with config:", {
+      //   max: poolConfig.max,
+      //   idleTimeout: poolConfig.idleTimeout,
+      //   maxLifetime: poolConfig.maxLifetime,
+      // });
     } catch (error) {
       console.error("Failed to initialize database pool:", error);
       throw error;
@@ -106,11 +106,11 @@ export class PgDatabasePool {
             WHERE name = 'max_connections'
         `;
 
-        console.log("PostgreSQL connection info:", {
-          maxConnections: connInfo?.max_connections,
-          currentConnections: connInfo?.current_connections,
-          poolMax: this.config.max,
-        });
+        // console.log("PostgreSQL connection info:", {
+        //   maxConnections: connInfo?.max_connections,
+        //   currentConnections: connInfo?.current_connections,
+        //   poolMax: this.config.max,
+        // });
       } catch (connError) {
         console.warn("Could not fetch connection info:", connError);
       }
