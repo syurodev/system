@@ -1,15 +1,10 @@
-# @parmatic/utils
+# packages/types
 
-To install dependencies:
+Gói này định nghĩa các kiểu dữ liệu (TypeScript types) và enums được sử dụng trên toàn hệ thống. Việc sử dụng một gói chung giúp đảm bảo sự nhất quán về mặt dữ liệu giữa frontend, backend và các service khác nhau.
 
-```bash
-bun install
-```
+## Các Enums được cung cấp
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.20. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+- `AccountEnum`: Các enum liên quan đến tài khoản người dùng.
+- `CatalogEnum`: Các enum cho việc quản lý danh mục (catalog).
+- `CommunityEnum`: Các enum liên quan đến các tính năng cộng đồng.
+- `PaymentEnum`: Các enum cho các vấn đề liên quan đến thanh toán.

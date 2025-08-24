@@ -26,17 +26,21 @@ export interface BaseEntity {
   updated_at: Date | string;
 }
 
+// Transaction type - Bun SQL transaction instance
+export type Transaction = any; // This will be the tx parameter from sql.begin(async (tx) => {})
+
 // Repository interface
 export interface IRepository<T extends BaseEntity> {
-  findById(id: string): Promise<T | null>;
-  findAll(options?: FindManyOptions): Promise<T[]>;
-  findMany(options?: FindManyOptions): Promise<PaginationResult<T>>;
-  create(data: Omit<T, "id" | "created_at" | "updated_at">): Promise<T>;
+  findById(id: string, tx?: Transaction): Promise<T | null>;
+  findAll(options?: FindManyOptions, tx?: Transaction): Promise<T[]>;
+  findMany(options?: FindManyOptions, tx?: Transaction): Promise<PaginationResult<T>>;
+  create(data: Omit<T, "id" | "created_at" | "updated_at">, tx?: Transaction): Promise<T>;
   update(
     id: string,
     data: Partial<Omit<T, "id" | "created_at" | "updated_at">>,
+    tx?: Transaction
   ): Promise<T | null>;
-  delete(id: string): Promise<boolean>;
-  exists(id: string): Promise<boolean>;
-  count(where?: Record<string, any>): Promise<number>;
+  delete(id: string, tx?: Transaction): Promise<boolean>;
+  exists(id: string, tx?: Transaction): Promise<boolean>;
+  count(where?: Record<string, any>, tx?: Transaction): Promise<number>;
 }
