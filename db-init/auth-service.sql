@@ -40,7 +40,7 @@ COMMENT ON COLUMN users.email IS 'Địa chỉ email duy nhất, dùng để đ�
 COMMENT ON COLUMN users.email_verified IS 'Cờ đánh dấu email đã được xác thực hay chưa';
 COMMENT ON COLUMN users.is_anonymous IS 'Cờ cho người dùng ẩn danh (tùy chọn)';
 COMMENT ON COLUMN users.image IS 'URL ảnh đại diện (avatar) của người dùng';
-COMMENT ON COLUMN users.bio IS 'Tiểu sử ngắn do người dùng tự viết (custom field)';
+COMMENT ON COLUMN users.metadata IS 'Tiểu sử ngắn do người dùng tự viết (custom field)';
 COMMENT ON COLUMN users.created_at IS 'Thời điểm tài khoản được tạo';
 COMMENT ON COLUMN users.updated_at IS 'Thời điểm thông tin tài khoản được cập nhật lần cuối';
 
@@ -186,7 +186,11 @@ COMMENT ON COLUMN subscriptions.updated_at IS 'Thời điểm gói được cậ
 -- 7) ROLES
 CREATE TABLE IF NOT EXISTS roles (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) UNIQUE NOT NULL
+    name VARCHAR(50) UNIQUE NOT NULL,
+    is_system BOOLEAN NOT NULL DEFAULT FALSE,
+    description TEXT DEFAULT '',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
 COMMENT ON TABLE roles IS 'Bảng định nghĩa các vai trò trong hệ thống (RBAC).';
@@ -196,7 +200,10 @@ COMMENT ON COLUMN roles.name IS 'Tên vai trò duy nhất (ví dụ: ''Admin'', 
 -- 8) PERMISSIONS
 CREATE TABLE IF NOT EXISTS permissions (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100) UNIQUE NOT NULL
+    name VARCHAR(100) UNIQUE NOT NULL,
+    description TEXT DEFAULT '',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
 COMMENT ON TABLE permissions IS 'Bảng định nghĩa các quyền hạn chi tiết (RBAC).';

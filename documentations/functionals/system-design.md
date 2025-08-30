@@ -30,7 +30,7 @@ Với quy mô và độ phức tạp của dự án, việc áp dụng kiến tr
          |                         |           |                         |
          v                         v           v                         v
 +------------------+   +------------------+   +------------------+   +------------------+
-| 1. Account       |   | 2. Catalog       |   | 3. Community     |   | 4. Payment       |
+| 1. Identify      |   | 2. Catalog       |   | 3. Community     |   | 4. Payment       |
 |    Service       |   |    Service       |   |    Service       |   |    Service       |
 +------------------+   +------------------+   +------------------+   +------------------+
          ^                   |           |

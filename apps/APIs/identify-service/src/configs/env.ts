@@ -16,4 +16,8 @@ export const ENV = {
   CONFIG_PG_USER_IDLE_TIMEOUT: parseInt(
     process.env.CONFIG_PG_USER_IDLE_TIMEOUT ?? "30000",
   ),
+
+  // Better Auth configuration
+  BETTER_AUTH_SECRET: process.env.BETTER_AUTH_SECRET ?? "your-super-secret-key-change-this-in-production",
+  BETTER_AUTH_URL: process.env.BETTER_AUTH_URL ?? `http://localhost:${parseInt(process.env.CONFIG_SERVICE_PORT ?? "3101")}`,
 };

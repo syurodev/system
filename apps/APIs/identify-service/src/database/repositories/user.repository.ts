@@ -73,7 +73,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
       // Use LOWER() for case-insensitive email search
       // This matches the database index for optimal performance
       const [result] = await client`
-        SELECT * FROM users 
+        SELECT * FROM users
         WHERE LOWER(email) = LOWER(${email})
         AND email IS NOT NULL
         LIMIT 1
@@ -115,7 +115,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
 
       // Use LOWER() for case-insensitive username search
       const [result] = await client`
-        SELECT * FROM users 
+        SELECT * FROM users
         WHERE LOWER(username) = LOWER(${username})
         AND username IS NOT NULL
         LIMIT 1
@@ -155,7 +155,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
 
       // Search both username and email fields with case-insensitive matching
       const [result] = await client`
-        SELECT * FROM users 
+        SELECT * FROM users
         WHERE (LOWER(username) = LOWER(${identifier}) AND username IS NOT NULL)
            OR (LOWER(email) = LOWER(${identifier}) AND email IS NOT NULL)
         LIMIT 1
@@ -201,7 +201,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
 
       // Single query to check both username and email availability
       const results = await client`
-        SELECT 
+        SELECT
           EXISTS(SELECT 1 FROM users WHERE LOWER(username) = LOWER(${username}) AND username IS NOT NULL) AS username_exists,
           EXISTS(SELECT 1 FROM users WHERE LOWER(email) = LOWER(${email}) AND email IS NOT NULL) AS email_exists
       `;
@@ -259,7 +259,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
 
       // Join users with their active subscriptions
       const results = await client`
-        SELECT 
+        SELECT
           u.*,
           s.id as subscription_id,
           s.plan_type,
@@ -369,7 +369,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
 
       // Join users with team_members to get team role information
       const results = await client`
-        SELECT 
+        SELECT
           u.*,
           tm.role as team_role
         FROM users u
@@ -413,7 +413,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
 
       // Join team_members with teams to get team details
       const results = await client`
-        SELECT 
+        SELECT
           t.*,
           tm.role as user_role
         FROM teams t
@@ -470,7 +470,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
 
       // Get user and their roles in a single query using array aggregation
       const [result] = await client`
-        SELECT 
+        SELECT
           u.*,
           COALESCE(ARRAY_AGG(r.name) FILTER (WHERE r.name IS NOT NULL), '{}') as role_names
         FROM users u
@@ -594,8 +594,8 @@ export class UserRepository extends BaseRepository<UserEntity> {
           email ILIKE ${"%" + query + "%"}
         )
         ${emailFilter}
-        ORDER BY 
-          CASE 
+        ORDER BY
+          CASE
             WHEN LOWER(username) = LOWER(${query}) THEN 1
             WHEN LOWER(name) = LOWER(${query}) THEN 2
             WHEN LOWER(email) = LOWER(${query}) THEN 3
@@ -605,7 +605,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
         LIMIT ${limit} OFFSET ${offset}
       `;
 
-      return UserEntity.fromRows(results);
+      return UserEntity.fromRows<UserEntity>(results);
     } catch (error) {
       console.error("Error searching users:", error);
       return [];
@@ -648,7 +648,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
         LIMIT ${limit}
       `;
 
-      return UserEntity.fromRows(results);
+      return UserEntity.fromRows<UserEntity>(results);
     } catch (error) {
       console.error("Error finding active users:", error);
       return [];
@@ -677,7 +677,7 @@ export class UserRepository extends BaseRepository<UserEntity> {
 
       // Single complex query to get all user statistics
       const [result] = await client`
-        SELECT 
+        SELECT
           u.*,
           s.plan_type as subscription_plan,
           s.status as subscription_status,

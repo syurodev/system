@@ -1,36 +1,12 @@
 import { Elysia } from "elysia";
 import swagger from "@elysiajs/swagger";
+import { cors } from "@elysiajs/cors";
 import { handleError, initDatabase } from "@repo/elysia";
 import { ENV } from "./configs/env";
 import { apiRoutes } from "./modules";
 import { showStartupBanner } from "./utils/startup-banner";
 
-export const identifyService = new Elysia()
-  .use(
-    swagger({
-      documentation: {
-        info: {
-          title: "Identity Service API",
-          version: "1.0.0",
-          description: "Authentication và User Management Service",
-        },
-        tags: [
-          {
-            name: "Authentication",
-            description: "Better Auth integration endpoints",
-          },
-          {
-            name: "User Management",
-            description: "User CRUD và role management",
-          },
-        ],
-      },
-    }),
-  )
-  .use(apiRoutes)
-  .onError(handleError);
-
-// Initialize database
+// Initialize database first
 let databaseStatus: "connected" | "error" = "connected";
 try {
   await initDatabase({
@@ -49,6 +25,55 @@ try {
   databaseStatus = "error";
   console.error("Database initialization failed:", error);
 }
+
+// Import auth after database is initialized
+import { auth } from "./lib/auth";
+
+export const identifyService = new Elysia()
+  .use(
+    cors({
+      origin: true, // Allow all origins in development
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      credentials: true,
+      allowedHeaders: ["Content-Type", "Authorization"],
+    }),
+  )
+  .use(
+    swagger({
+      documentation: {
+        info: {
+          title: "Identity Service API",
+          version: "1.0.0",
+          description: "Authentication và User Management Service với Better Auth",
+        },
+        tags: [
+          {
+            name: "Authentication",
+            description: "Better Auth integration endpoints",
+          },
+          {
+            name: "User Management",
+            description: "User CRUD và role management",
+          },
+        ],
+      },
+    }),
+  )
+  // Mount Better Auth handler
+  .mount("/api/auth", auth.handler)
+  // Add session middleware
+  .derive(async ({ request }) => {
+    const session = await auth.api.getSession({
+      headers: request.headers,
+    });
+
+    return {
+      session: session?.session || null,
+      user: session?.user || null,
+    };
+  })
+  .use(apiRoutes)
+  .onError(handleError);
 
 // Start server
 identifyService.listen({

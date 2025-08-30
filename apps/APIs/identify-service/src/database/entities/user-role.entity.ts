@@ -1,10 +1,14 @@
-export class UserRoleEntity {
+import { BaseEntity } from "./base.entity";
+
+export class UserRoleEntity extends BaseEntity {
   user_id: string = "";
   role_id: string = "";
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
-  toJSON() {
-    return { ...this };
+  static getTableName(): string {
+    return "user_roles";
   }
 }

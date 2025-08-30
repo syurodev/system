@@ -1,10 +1,16 @@
-export class PermissionEntity {
-  id: string = "";
+import { BaseEntity } from "./base.entity";
+
+export class PermissionEntity extends BaseEntity {
   name: string = "";
+  description: string = "";
+  created_at: Date | string = "";
+  updated_at: Date | string = "";
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
-  toJSON() {
-    return { ...this };
+  static getTableName(): string {
+    return "permissions";
   }
 }

@@ -1,5 +1,6 @@
-export class SubscriptionEntity {
-  id: string = "";
+import { BaseEntity } from "./base.entity";
+
+export class SubscriptionEntity extends BaseEntity {
   user_id: string = "";
   plan_type: string = "";
   status: string = "";
@@ -8,4 +9,12 @@ export class SubscriptionEntity {
   stripe_subscription_id: string = "";
   created_at: Date | string = "";
   updated_at: Date | string = "";
+
+  constructor() {
+    super();
+  }
+
+  static getTableName(): string {
+    return "subscriptions";
+  }
 }

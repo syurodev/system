@@ -1,5 +1,6 @@
-export class AccountEntity {
-  id: string = "";
+import { BaseEntity } from "./base.entity";
+
+export class AccountEntity extends BaseEntity {
   user_id: string = "";
   provider_id: string = "";
   account_id: string = "";
@@ -13,9 +14,11 @@ export class AccountEntity {
   created_at: Date | string = "";
   updated_at: Date | string = "";
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
-  toJSON() {
-    return { ...this };
+  static getTableName(): string {
+    return "accounts";
   }
 }

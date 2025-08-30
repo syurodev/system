@@ -1,10 +1,17 @@
-export class RoleEntity {
-  id: string = "";
+import { BaseEntity } from "./base.entity";
+
+export class RoleEntity extends BaseEntity {
   name: string = "";
+  is_system: boolean = false;
+  description: string = "";
+  created_at: Date | string = "";
+  updated_at: Date | string = "";
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
-  toJSON() {
-    return { ...this };
+  static getTableName(): string {
+    return "roles";
   }
 }

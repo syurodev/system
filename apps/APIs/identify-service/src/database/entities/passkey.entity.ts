@@ -1,5 +1,6 @@
-export class PasskeyEntity {
-  id: string = "";
+import { BaseEntity } from "./base.entity";
+
+export class PasskeyEntity extends BaseEntity {
   name: string = "";
   public_key: string = "";
   user_id: string = "";
@@ -9,11 +10,14 @@ export class PasskeyEntity {
   backed_up: boolean = false;
   transports: string = "";
   created_at: Date | string = "";
+  updated_at: Date | string = "";
   aaguid: string = "";
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
-  toJSON() {
-    return { ...this };
+  static getTableName(): string {
+    return "passkeys";
   }
 }

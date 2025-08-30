@@ -1,5 +1,6 @@
-export class SessionEntity {
-  id: string = "";
+import { BaseEntity } from "./base.entity";
+
+export class SessionEntity extends BaseEntity {
   user_id: string = "";
   token: string = "";
   expires_at: Date | string = "";
@@ -8,9 +9,11 @@ export class SessionEntity {
   created_at: Date | string = "";
   updated_at: Date | string = "";
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
-  toJSON() {
-    return { ...this };
+  static getTableName(): string {
+    return "sessions";
   }
 }
